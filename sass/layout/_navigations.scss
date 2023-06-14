@@ -1,0 +1,56 @@
+.nav {
+    color: darken($color-white, 20%);
+    justify-content: space-between;
+
+    .container {
+        @include flex;
+    }
+
+    &__logo {
+        display: inline-block;
+        // background-color: $color-primary;
+        margin-right: 50px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        @include center;
+    }
+
+    &__list {
+        @include flex;
+        gap: 30px;
+        @include responsive(desktop) {
+            display: none;
+        }
+    }
+
+    &__item {
+        // margin-right: 15px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+
+    &__link {
+        padding: 5px;
+        @include transition(color);
+
+        &:hover {
+            color: $color-white;
+        }
+
+        
+
+    }
+
+    &__right {
+        // margin-left: auto;
+
+        @include responsive(desktop) {
+            display: none;
+        }
+    }
+}
